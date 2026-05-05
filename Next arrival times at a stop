@@ -1,0 +1,7 @@
+SELECT t.route_id, st.arrival_time
+FROM stop_times st
+JOIN trips t ON st.trip_id = t.trip_id
+WHERE st.stop_id = 'STOP_123'
+  AND st.arrival_time > CURRENT_TIME
+ORDER BY st.arrival_time
+LIMIT 5;
