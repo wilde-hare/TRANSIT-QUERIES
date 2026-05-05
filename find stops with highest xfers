@@ -1,0 +1,5 @@
+SELECT stop_id, COUNT(*) AS transfer_count
+FROM transfers
+GROUP BY stop_id
+ORDER BY transfer_count DESC
+LIMIT 10;
