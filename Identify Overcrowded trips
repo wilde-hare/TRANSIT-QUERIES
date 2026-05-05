@@ -1,0 +1,7 @@
+SELECT trip_id, MAX(load_factor) AS peak_load
+FROM ridership
+WHERE load_factor > 1.0
+GROUP BY trip_id
+ORDER BY peak_load DESC;
+
+
