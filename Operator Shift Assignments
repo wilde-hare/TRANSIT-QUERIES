@@ -1,0 +1,5 @@
+SELECT o.operator_name, s.shift_start, s.shift_end, r.route_short_name
+FROM operator_shifts s
+JOIN operators o ON s.operator_id = o.operator_id
+JOIN routes r ON s.route_id = r.route_id
+WHERE s.shift_date = CURRENT_DATE;
