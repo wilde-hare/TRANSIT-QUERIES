@@ -1,0 +1,5 @@
+SELECT r.route_id, SUM(r.boardings) AS total_boardings
+FROM ridership r
+WHERE r.date = CURRENT_DATE
+GROUP BY r.route_id
+ORDER BY total_boardings DESC;
